@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007978C41F5DDBD9000ECC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007978C31F5DDBD9000ECC10 /* AppDelegate.swift */; };
+		007978C61F5DDBD9000ECC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007978C51F5DDBD9000ECC10 /* ViewController.swift */; };
+		007978C91F5DDBD9000ECC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007978C71F5DDBD9000ECC10 /* Main.storyboard */; };
+		007978CB1F5DDBD9000ECC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007978CA1F5DDBD9000ECC10 /* Assets.xcassets */; };
+		007978CE1F5DDBD9000ECC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007978CC1F5DDBD9000ECC10 /* LaunchScreen.storyboard */; };
+		007978D71F5DE7CB000ECC10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007978D61F5DE7CB000ECC10 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		007978C01F5DDBD9000ECC10 /* Workout Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		007978C31F5DDBD9000ECC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		007978C51F5DDBD9000ECC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		007978C81F5DDBD9000ECC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		007978CA1F5DDBD9000ECC10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		007978CD1F5DDBD9000ECC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		007978CF1F5DDBD9000ECC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		007978D61F5DE7CB000ECC10 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		007978BD1F5DDBD9000ECC10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007978D71F5DE7CB000ECC10 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		007978B71F5DDBD9000ECC10 = {
+			isa = PBXGroup;
+			children = (
+				007978C21F5DDBD9000ECC10 /* Workout Timer */,
+				007978C11F5DDBD9000ECC10 /* Products */,
+				007978D51F5DE7CB000ECC10 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		007978C11F5DDBD9000ECC10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				007978C01F5DDBD9000ECC10 /* Workout Timer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		007978C21F5DDBD9000ECC10 /* Workout Timer */ = {
+			isa = PBXGroup;
+			children = (
+				007978C31F5DDBD9000ECC10 /* AppDelegate.swift */,
+				007978C51F5DDBD9000ECC10 /* ViewController.swift */,
+				007978C71F5DDBD9000ECC10 /* Main.storyboard */,
+				007978CA1F5DDBD9000ECC10 /* Assets.xcassets */,
+				007978CC1F5DDBD9000ECC10 /* LaunchScreen.storyboard */,
+				007978CF1F5DDBD9000ECC10 /* Info.plist */,
+			);
+			path = "Workout Timer";
+			sourceTree = "<group>";
+		};
+		007978D51F5DE7CB000ECC10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				007978D61F5DE7CB000ECC10 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		007978BF1F5DDBD9000ECC10 /* Workout Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 007978D21F5DDBD9000ECC10 /* Build configuration list for PBXNativeTarget "Workout Timer" */;
+			buildPhases = (
+				007978BC1F5DDBD9000ECC10 /* Sources */,
+				007978BD1F5DDBD9000ECC10 /* Frameworks */,
+				007978BE1F5DDBD9000ECC10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Workout Timer";
+			productName = "Workout Timer";
+			productReference = 007978C01F5DDBD9000ECC10 /* Workout Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		007978B81F5DDBD9000ECC10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Gabe;
+				TargetAttributes = {
+					007978BF1F5DDBD9000ECC10 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AKK67QUN78;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 007978BB1F5DDBD9000ECC10 /* Build configuration list for PBXProject "Workout Timer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 007978B71F5DDBD9000ECC10;
+			productRefGroup = 007978C11F5DDBD9000ECC10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				007978BF1F5DDBD9000ECC10 /* Workout Timer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		007978BE1F5DDBD9000ECC10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007978CE1F5DDBD9000ECC10 /* LaunchScreen.storyboard in Resources */,
+				007978CB1F5DDBD9000ECC10 /* Assets.xcassets in Resources */,
+				007978C91F5DDBD9000ECC10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		007978BC1F5DDBD9000ECC10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007978C61F5DDBD9000ECC10 /* ViewController.swift in Sources */,
+				007978C41F5DDBD9000ECC10 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		007978C71F5DDBD9000ECC10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				007978C81F5DDBD9000ECC10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		007978CC1F5DDBD9000ECC10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				007978CD1F5DDBD9000ECC10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		007978D01F5DDBD9000ECC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		007978D11F5DDBD9000ECC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		007978D31F5DDBD9000ECC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AKK67QUN78;
+				INFOPLIST_FILE = "Workout Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "gs.hire.Workout-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		007978D41F5DDBD9000ECC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AKK67QUN78;
+				INFOPLIST_FILE = "Workout Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "gs.hire.Workout-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		007978BB1F5DDBD9000ECC10 /* Build configuration list for PBXProject "Workout Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007978D01F5DDBD9000ECC10 /* Debug */,
+				007978D11F5DDBD9000ECC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		007978D21F5DDBD9000ECC10 /* Build configuration list for PBXNativeTarget "Workout Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007978D31F5DDBD9000ECC10 /* Debug */,
+				007978D41F5DDBD9000ECC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 007978B81F5DDBD9000ECC10 /* Project object */;
+}
