@@ -57,6 +57,10 @@ class Timer {
 		const btn = this.el.button;
 		
 		['touchstart', 'mousedown'].map((e) => {
+			if (e === 'mousedown' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.setCompleted.addEventListener(e, () => {
 				this.toggleBtnHighlight(btn.setCompleted);
 				
@@ -73,6 +77,10 @@ class Timer {
 		});
 
 		['touchend', 'mouseup'].map((e) => {
+			if (e === 'mouseup' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.setCompleted.addEventListener(e, () => {
 				setTimeout(() => this.toggleBtnHighlight(btn.setCompleted), 500);
 			});
@@ -80,6 +88,10 @@ class Timer {
 
 
 		['touchstart', 'mousedown'].map((e) => {
+			if (e === 'mousedown' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.reset.addEventListener(e, () => {
 				this.toggleBtnHighlight(btn.reset);
 				
@@ -92,6 +104,10 @@ class Timer {
 		});
 
 		['touchend', 'mouseup'].map((e) => {
+			if (e === 'mouseup' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.reset.addEventListener(e, () => {
 				setTimeout(() => this.toggleBtnHighlight(btn.reset), 500);
 			});
@@ -99,6 +115,10 @@ class Timer {
 
 
 		['touchstart', 'mousedown'].map((e) => {
+			if (e === 'mousedown' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.toggleTimer.addEventListener(e, () => {
 				this.toggleBtnHighlight(btn.toggleTimer);
 				
@@ -113,6 +133,10 @@ class Timer {
 		});
 
 		['touchend', 'mouseup'].map((e) => {
+			if (e === 'mouseup' && this.isTouchDevice()) {
+				return;
+			}
+			
 			btn.toggleTimer.addEventListener(e, () => {
 				setTimeout(() => this.toggleBtnHighlight(btn.toggleTimer), 500);
 			});
@@ -125,6 +149,10 @@ class Timer {
 		} else {
 			el.className = 'touched';
 		}
+	}
+	
+	isTouchDevice() {
+		return 'ontouchstart' in document.documentElement; 
 	}
 	
 	countdownStart() {
