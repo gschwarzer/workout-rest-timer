@@ -9,7 +9,7 @@ class Timer {
 		//Settings
 		this.settings = settings || {
 			maxSet: 5,
-			countdownFrom: 10,
+			countdownFrom: 90,
 			countdownFromAlt: 60,
 			getReadyAtSec: 7
 		};
@@ -56,54 +56,66 @@ class Timer {
 	addEventListeners() {
 		const btn = this.el.button;
 		
-		btn.setCompleted.addEventListener('touchstart', () => {
-			this.toggleBtnHighlight(btn.setCompleted);
-			
-			//Load sounds
-			this.sound.getReady.load();
-			this.sound.start.load();
-			
-			//Start countdown
-			this.countdownStart();
-			
-			//Increase set count by 1
-			this.addSet();
+		['touchstart', 'mousedown'].map((e) => {
+			btn.setCompleted.addEventListener(e, () => {
+				this.toggleBtnHighlight(btn.setCompleted);
+				
+				//Load sounds
+				this.sound.getReady.load();
+				this.sound.start.load();
+				
+				//Start countdown
+				this.countdownStart();
+				
+				//Increase set count by 1
+				this.addSet();
+			});
 		});
 
-		btn.setCompleted.addEventListener('touchend', () => {
-			setTimeout(() => this.toggleBtnHighlight(btn.setCompleted), 500);
-		});
-
-
-		btn.reset.addEventListener('touchstart', () => {
-			this.toggleBtnHighlight(btn.reset);
-			
-			//Reset countdown
-			this.countdownReset();
-			
-			//Reset the set count
-			this.resetSet();
-		});
-
-		btn.reset.addEventListener('touchend', () => {
-			setTimeout(() => this.toggleBtnHighlight(btn.reset), 500);
+		['touchend', 'mouseup'].map((e) => {
+			btn.setCompleted.addEventListener(e, () => {
+				setTimeout(() => this.toggleBtnHighlight(btn.setCompleted), 500);
+			});
 		});
 
 
-		btn.toggleTimer.addEventListener('touchstart', () => {
-			this.toggleBtnHighlight(btn.toggleTimer);
-			
-			const newTime = parseInt(this.el.timerLength.innerHTML);
-			
-			this.el.timerLength.innerHTML = this.settings.countdownFrom;
-			
-			this.settings.countdownFrom = newTime;
-			
-			this.el.timeLeft.innerHTML = newTime.toFixed(1);
+		['touchstart', 'mousedown'].map((e) => {
+			btn.reset.addEventListener(e, () => {
+				this.toggleBtnHighlight(btn.reset);
+				
+				//Reset countdown
+				this.countdownReset();
+				
+				//Reset the set count
+				this.resetSet();
+			});
 		});
 
-		btn.toggleTimer.addEventListener('touchend', () => {
-			setTimeout(() => this.toggleBtnHighlight(btn.toggleTimer), 500);
+		['touchend', 'mouseup'].map((e) => {
+			btn.reset.addEventListener(e, () => {
+				setTimeout(() => this.toggleBtnHighlight(btn.reset), 500);
+			});
+		});
+
+
+		['touchstart', 'mousedown'].map((e) => {
+			btn.toggleTimer.addEventListener(e, () => {
+				this.toggleBtnHighlight(btn.toggleTimer);
+				
+				const newTime = parseInt(this.el.timerLength.innerHTML);
+				
+				this.el.timerLength.innerHTML = this.settings.countdownFrom;
+				
+				this.settings.countdownFrom = newTime;
+				
+				this.el.timeLeft.innerHTML = newTime.toFixed(1);
+			});
+		});
+
+		['touchend', 'mouseup'].map((e) => {
+			btn.toggleTimer.addEventListener(e, () => {
+				setTimeout(() => this.toggleBtnHighlight(btn.toggleTimer), 500);
+			});
 		});
 	}
 	
