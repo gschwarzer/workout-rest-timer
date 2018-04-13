@@ -7,18 +7,17 @@
 //
 
 import UIKit
-import WebKit
 
-class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class ViewController: UIViewController, UIWebViewDelegate {
 	
-	@IBOutlet weak var webView: WKWebView!
+	@IBOutlet weak var webView: UIWebView!
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
 	}
 	
-	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-		UIView.animate(withDuration: 0.3) {
+	func webViewDidFinishLoad(_ webView: UIWebView) {
+		UIView.animate(withDuration: 0.5) {
 			webView.alpha = 1;
 		}
 	}
@@ -31,7 +30,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 		URLCache.shared.diskCapacity = 0
 		URLCache.shared.memoryCapacity = 0
 		
-		webView.navigationDelegate = self;
+		webView.delegate = self;
 		
 		webView.scrollView.isScrollEnabled = false;
 		webView.scrollView.bounces = false;
@@ -39,9 +38,9 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 		webView.alpha = 0;
 		
 		if let url = URL(string: "https://hire.gs/workout") {
-		//if let url = URL(string: "http://127.0.0.1:3000/") {
+		//if let url = URL(string: "http://192.168.1.73:3000") {
 			let request = URLRequest(url: url);
-			webView.load(request);
+			webView.loadRequest(request);
 		}
 	}
 

@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		do {
 			try session.setCategory(AVAudioSessionCategoryPlayback,
 			                        mode: AVAudioSessionModeDefault,
-			                        options: .mixWithOthers)
+			                        options: AVAudioSessionCategoryOptions.mixWithOthers)
 			try session.setActive(true)
 			
 		} catch let error as NSError {

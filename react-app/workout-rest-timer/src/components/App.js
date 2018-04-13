@@ -7,8 +7,8 @@ import startSound from 'assets/sounds/start.mp3';
 class App extends Component {
 	
 	state = {
-		timeLeft: 90,
-		countdownFrom: 90,
+		timeLeft: 10,
+		countdownFrom: 10,
 		countdownFromAlt: 60,
 		setsCompleted: 0,
 		setsTotal: 5,
