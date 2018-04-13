@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 	
-	@IBOutlet weak var webView: UIWebView!
+	@IBOutlet weak var webView: WKWebView!
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
+	}
+	
+	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+		UIView.animate(withDuration: 0.3) {
+			webView.alpha = 1;
+		}
 	}
 	
 	override func viewDidLoad() {
@@ -24,11 +31,17 @@ class ViewController: UIViewController, UIWebViewDelegate {
 		URLCache.shared.diskCapacity = 0
 		URLCache.shared.memoryCapacity = 0
 		
-		webView.delegate = self
+		webView.navigationDelegate = self;
+		
+		webView.scrollView.isScrollEnabled = false;
+		webView.scrollView.bounces = false;
+		
+		webView.alpha = 0;
 		
 		if let url = URL(string: "https://hire.gs/workout") {
-			let request = URLRequest(url: url)
-			webView.loadRequest(request)
+		//if let url = URL(string: "http://127.0.0.1:3000/") {
+			let request = URLRequest(url: url);
+			webView.load(request);
 		}
 	}
 

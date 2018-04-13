@@ -19,7 +19,7 @@
 }
 
 html, body {
-	height: 103%;
+	height: 100vh;
 	display: grid;
 	overflow:hidden;
 	touch-action: manipulation;
