@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'DIN 1451 Mittelschrift LT';
+    src: url('../fonts/DIN-1451-Mittelschrift-LT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN 1451 Engschrift LT';
+    src: url('../fonts/DIN-1451-Engschrift-LT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+html, body {
+	height: 103%;
+	display: grid;
+	overflow:hidden;
+	touch-action: manipulation;
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'DIN 1451 Mittelschrift LT', monospace;
+	background-image: linear-gradient(-45deg, #333333 0%,#000000 45%,#000000 55%,#333333 100%);
+	background-color: #000000;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color:#fff;
+}
+
+body.get-ready {
+	background-image: linear-gradient(-45deg, #111111 0%,#003366 40%,#003366 60%,#111111 100%);
+	background-color: #003366;
+}
+
+#app {
+	text-align: center;
+	margin: auto;
+}
+
+.time-left {
+	font-size: 12em;
+	margin-bottom:80px;
+}
+
+.sets {
+	font-size: 6em;
+	margin-bottom:60px;
+}
+
+button {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	padding:24px 35px 22px 35px;
+	font-size: 1.6em;
+	margin:40px;
+	color:#fff;
+	background-color: #333;
+	font-family: 'DIN 1451 Engschrift LT', monospace;
+	text-transform: uppercase;
+	border:1px solid #666;
+	border-radius:5px;
+	box-shadow: 0 0 15px #000;
+	-webkit-transition: all 500ms;
+}
+
+body.get-ready button {
+	background-color: #222;
+}
+
+button.active {
+	background-color: #003366;
+	box-shadow: 0 0 15px #fff;
+}
+
+@media screen and (max-width: 600px) {
+	.time-left {
+		font-size: 8em;
+		margin-bottom:60px;
+	}
+	
+	.sets {
+		font-size: 4em;
+		margin-bottom:40px;
+	}
+	
+	button {
+		padding:9px 17px 7px 17px;
+		font-size: 1.3em;
+		margin:20px;
+		box-shadow: 0 0 7px #000;
+	}
+	
+	button.active {
+		box-shadow: 0 0 7px #fff;
+	}
+}
