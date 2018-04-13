@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import 'assets/css/styles.css';
-import getReadySound from 'assets/sounds/get_ready.mp3';
-import startSound from 'assets/sounds/start.mp3';
+import '../assets/css/styles.css';
+import getReadySound from '../assets/sounds/get_ready.mp3';
+import startSound from '../assets/sounds/start.mp3';
 
 
 class App extends Component {
 	
 	state = {
-		timeLeft: 10,
-		countdownFrom: 10,
+		timeLeft: 90,
+		countdownFrom: 90,
 		countdownFromAlt: 60,
 		setsCompleted: 0,
 		setsTotal: 5,
@@ -50,7 +50,30 @@ class App extends Component {
 		document.body.className = '';
 	}
 	
+	loadSounds = () => {
+		this.sounds.getReady.load();
+		this.sounds.start.load();
+	}
+	
+	highlightButton = (e) => {
+		const el = e.target;
+		
+		el.className = 'active';
+		
+		setTimeout(() => {
+			el.className = '';
+		}, 500);
+	}
+	
+	isTouchDevice() {
+		return 'ontouchstart' in document.documentElement; 
+	}
+	
 	handleSetCompleted = (e) => {
+		if (e.type === 'click' && this.isTouchDevice()) { //ignore onClick on touch devices
+			return;
+		}
+		
 		this.highlightButton(e);
 		
 		this.resetCountdown();
@@ -74,6 +97,10 @@ class App extends Component {
 	}
 	
 	handleCountdownAltSwitch = (e) => {
+		if (e.type === 'click' && this.isTouchDevice()) { //ignore onClick on touch devices
+			return;
+		}
+		
 		this.highlightButton(e);
 		
 		this.resetCountdown();
@@ -89,6 +116,10 @@ class App extends Component {
 	}
 	
 	handleReset = (e) => {
+		if (e.type === 'click' && this.isTouchDevice()) { //ignore onClick on touch devices
+			return;
+		}
+		
 		this.highlightButton(e);
 		
 		this.resetCountdown();
@@ -99,21 +130,6 @@ class App extends Component {
 		});
 	}
 	
-	loadSounds = () => {
-		this.sounds.getReady.load();
-		this.sounds.start.load();
-	}
-	
-	highlightButton = (e) => {
-		const el = e.target;
-		
-		el.className = 'active';
-		
-		setTimeout(() => {
-			el.className = '';
-		}, 500);
-	}
-	
 	render() {
 		const { timeLeft, setsCompleted, setsTotal, countdownFromAlt } = this.state;
 		
@@ -122,11 +138,11 @@ class App extends Component {
 				<div className="time-left">{timeLeft.toFixed(1)}</div>
 				<div className="sets">{setsCompleted} / {setsTotal}</div>	
 				<div>
-					<button onClick={this.handleSetCompleted}>Set Completed</button>
+					<button onClick={this.handleSetCompleted} onTouchEnd={this.handleSetCompleted}>Set Completed</button>
 				</div>
 				<div>
-					<button onClick={this.handleCountdownAltSwitch}>Use {countdownFromAlt} sec Timer</button>
-					<button onClick={this.handleReset}>Reset Workout</button>
+					<button onClick={this.handleCountdownAltSwitch} onTouchEnd={this.handleCountdownAltSwitch}>Use {countdownFromAlt} sec Timer</button>
+					<button onClick={this.handleReset} onTouchEnd={this.handleReset}>Reset Workout</button>
 				</div>
 			</Fragment>
 		)
